@@ -133,7 +133,7 @@ footer {
             <div class="col">
                 <footer class="mastfoot mt-auto">
                     <div class="inner">
-                        <p>Powered by Max Liow @ Feb 2022. Version 0.2.0</p>
+                        <p>Powered by Max Liow @ Feb 2022. Version 0.2.1</p>
                     </div>
                 </footer>
             </div>
