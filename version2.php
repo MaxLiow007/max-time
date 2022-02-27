@@ -99,10 +99,11 @@ footer {
                             return abs(round($diff / 86400));
                         }
                         $startDay = date("Y-m-d"); // today date
-                        $endDay = "01-04-2022";
+                        $endDay = "2022-04-01";
                         $dateDiff = dateDiffInDays($startDay, $endDay);
 
-                        $dayLeft = 90 - $dateDiff;
+                        $dayLeft = $dateDiff - 1;
+
                         ?>
 
                         <h4><?=$dayLeft?></h4>
