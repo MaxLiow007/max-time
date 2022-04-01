@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Life Battery V2</title>
+    <title>Accept the Challenge!</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
 
@@ -71,6 +71,9 @@ footer {
     color:white;
 }
 
+.pwidth{
+    width: 510px;
+}
 </style>
 
 <body class="text-center">
@@ -81,14 +84,18 @@ footer {
             <div class="col">
                 <div id="outer" class="container">
                     <div id="inner">
-                        <h4>90 Days Goal</h4>
-                        <p>I create 12 artworks & upload to my portfolio site & earn extra $300 (total 3 mths) from my creative business</p>
+                        <h4>Q2 - 90 Days Goal</h4>
+                        <p class='pwidth'>Build a website with traffic. <br>
+                            💡 At least $100 income <br>
+                            💡 500 visitors monthly <br>
+                            💡 100 active users
+                        </p>
                         <hr />
                         <h4>Today is Day</h4>
                         <h4><?=$dayNumber = date("z") + 1; ?></h4>
 
                         <hr />
-                        <h4>90 days Goal Day Left</h4>
+                        <h4>Day Left</h4>
 
                         <?php
                         function dateDiffInDays($startDay, $endDay){
@@ -98,11 +105,12 @@ footer {
                             // 24 * 60 * 60 = 86400 seconds
                             return abs(round($diff / 86400));
                         }
-                        $startDay = date("Y-m-d"); // today date
-                        $endDay = "2022-04-01";
+                        // $startDay = date("Y-m-d"); // today date
+                        $startDay = "2022-04-01";
+                        $endDay = "2022-06-29";
                         $dateDiff = dateDiffInDays($startDay, $endDay);
 
-                        $dayLeft = $dateDiff - 1;
+                        $dayLeft = $dateDiff ;
 
                         ?>
 
@@ -115,7 +123,8 @@ footer {
             <div class="col">
                 <div id="outer" class="container">
                     <div id="inner">
-                        <h3>人生很短暂，而我还未到过三亚</h3>
+                        <!-- <h3>人生很短暂，而我还未到过三亚</h3> -->
+                        <h3>今天很美好，可惜我却荒废青春</h3>
                         <hr />
                         <h3>Life Battery</h3>
                         <div class="time"></div>
@@ -133,7 +142,7 @@ footer {
             <div class="col">
                 <footer class="mastfoot mt-auto">
                     <div class="inner">
-                        <p>Powered by Max Liow @ Feb 2022. Version 0.2.1</p>
+                        <p>Powered by Max Liow @ Feb 2022. Version 0.2.2</p>
                     </div>
                 </footer>
             </div>
