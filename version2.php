@@ -105,15 +105,13 @@ footer {
                             // 24 * 60 * 60 = 86400 seconds
                             return abs(round($diff / 86400));
                         }
-                        // $startDay = date("Y-m-d"); // today date
-                        $startDay = "2022-04-01";
+                        $startDay = date("Y-m-d"); // today date
+                        // $startDay = "2022-04-01";
                         $endDay = "2022-06-29";
                         $dateDiff = dateDiffInDays($startDay, $endDay);
 
                         $dayLeft = $dateDiff ;
-
                         ?>
-
                         <h4><?=$dayLeft?></h4>
                         <br>
                     </div>
