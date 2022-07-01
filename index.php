@@ -1,20 +1,22 @@
 <?php
 
-$request = $_SERVER['REQUEST_URI'];
+define('HELLO', 'hello');
+define('SITE_URL', "http://localhost/maxliow");
 
-switch ($request) {
-    case '/' :
-        require __DIR__ . '/test.php';
-        break;
-    case '' :
-        require __DIR__ . '/test.php';
-        break;
-    case '/test' :
-        require __DIR__ . '/test.php';
-        break;
-    default:
-        // http_response_code(404);
-        // require __DIR__ . '/404.php';
-        require __DIR__ . '/version2.php';
-        break;
+// ROUTING MAP
+$section = (isset($_GET['section']) && !empty($_GET['section']))?$_GET['section']:'home';
+
+// ROUTING
+switch ($section) {
+	case 'home':
+		require('home.php');
+		break;
+	case 'test':
+		require('version2.php');
+		break;
+	default:
+		http_response_code(404);
+		exit;
 }
+
+exit;
