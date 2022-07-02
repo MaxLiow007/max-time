@@ -3,7 +3,7 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow: hidden; }
 
-h1 {
+h1, h6 {
   color: white; }
 
 #outer {
@@ -15,8 +15,10 @@ h1 {
   margin: auto;
   color: white;
   text-align: center; }
-  #inner h5 span {
-    color: #ffea6e; }
+  #inner h5 {
+    font-weight: 600; }
+    #inner h5 span {
+      color: #ffea6e; }
   #inner .kr {
     display: flex;
     flex-direction: column; }
@@ -35,14 +37,75 @@ hr {
   border: none;
   background-color: white; }
 
-h6 {
-  color: white; }
+.pwidth {
+  width: 420px; }
 
+.right {
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 0; }
+
+.small-font {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px; }
+
+/*---------- Square start ---------------*/
+#square {
+  margin-top: 1rem; }
+  #square tr td {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    color: #52514d;
+    position: relative; }
+    #square tr td .date {
+      font-size: 10px;
+      color: #929292;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+    #square tr td.active {
+      background: #ffea6e;
+      color: #0e1118; }
+      #square tr td.active > span.date {
+        color: #929292; }
+    #square tr td.today {
+      border: 1px solid white;
+      color: white; }
+      #square tr td.today span.date {
+        color: white; }
+  #square tr.underline {
+    border-bottom: 1px solid white; }
+  #square .inner-square {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 8px; }
+    #square .inner-square .date {
+      display: flex;
+      flex-direction: column; }
+      #square .inner-square .date .separator {
+        content: '';
+        position: absolute;
+        border-bottom: 1px white solid;
+        height: 100%;
+        width: 100%;
+        transform: translateY(-50%);
+        margin-left: auto;
+        margin-right: auto; }
+
+/*---------- Square end ---------------*/
+/*---------- footer start ---------------*/
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
   color: white; }
+  footer .inner p {
+    font-size: 12px; }
 
-.pwidth {
-  width: 420px; }
+/*---------- footer end ---------------*/
