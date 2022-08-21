@@ -2,7 +2,7 @@
 //To calculate the day left dynamically
 function dateDiffInDays($startDay, $endDay){
 	$diff = strtotime($endDay) - strtotime($startDay);
-	
+
 	// 1 day = 24 hours
 	// 24 * 60 * 60 = 86400 seconds
 	return abs(round($diff / 86400));
@@ -15,13 +15,13 @@ $dateDiff = dateDiffInDays($startDay, $endDay);
 $dayLeft = $dateDiff ;
 
 /**-----------------------*/
-//Get the two dates to put in the inner square	
+//Get the two dates to put in the inner square
 function getBetweenDates($startDate, $endDate){
 	$rangArray = [];
-	
+
 	$startDate = strtotime($startDate);
 	$endDate = strtotime($endDate);
-	
+
 	for (
 		$currentDate = $startDate;
 		$currentDate <= $endDate;
@@ -30,7 +30,7 @@ function getBetweenDates($startDate, $endDate){
 		$date = date('d-m-Y', $currentDate);
 		$rangArray[] = $date;
 	}
-	
+
 	return $rangArray;
 }
 
@@ -74,7 +74,7 @@ for ($i=0; $i < 90; $i++) {
     <div class="container">
         <div class="row" style="margin-top: 30px">
             <br>
-			<div class="col">
+			<div class="col-12 col-sm-12 col-md ">
                 <div id="outer" class="container">
                     <div id="inner">
                         <h5>We <span>become what we think about</span>
@@ -89,30 +89,30 @@ for ($i=0; $i < 90; $i++) {
                         <br>
                         <hr />
 						<h3>Lived</h3>
-						<div class="lived"></div>						
+						<div class="lived"></div>
 
                     </div>
                 </div>
             </div>
-			
-            <div class="col">
+
+            <div class="col-12 col-sm-12 col-md-7">
                 <div id="outer" class="container">
                     <div id="inner">
 
 						<h5>Day Left</h5>
-                        <!-- <h4><?=$dayLeft?></h4> -->
+                        <h4><?=$dayLeft?></h4>
 						<input id="day_left" type="hidden" value="<?=$dayLeft?>">
-						
+
 						<div id="square">
 							<?php
-							
+
 							echo "<table border =\"1\" style='border-collapse: collapse'>";
 							$no = 91;
 							$innerSquareNo = 0;
-							for ($row=1; $row <= 9; $row++) { 
+							for ($row=1; $row <= 9; $row++) {
 								echo "<tr id='row-$row'> \n";
 								for ($col=1; $col <= 10; $col++) {
-									$no = $no - 1;				
+									$no = $no - 1;
 									echo "<td id='day-$no' class=''>
 									<span>$no</span>
 									<span class='date'>$dateArr[$innerSquareNo]</span>
@@ -145,7 +145,6 @@ for ($i=0; $i < 90; $i++) {
 
 <script type="text/javascript" src="js/jquery.plugin.js"></script>
 <script type="text/javascript" src="js/jquery.countdown.js"></script>
-</body>
 
 <script>
 //countdown refer to http://keith-wood.name/countdown.html
@@ -160,7 +159,7 @@ $('#row-3, #row-6').addClass('underline');
 /*--------------- Day left square ------------------*/
 
 var day_left = parseInt($('#day_left').val()); // Day left from php
-var day_active = day_left + 2; 
+var day_active = day_left + 2;
 var result = range(day_active, 90); // calculate the date before today -> add active
 
 $('#day-'+ (day_left+1)).addClass('today'); // highlight today
@@ -178,4 +177,6 @@ function range(start, end) {
 }
 
 </script>
+
+</body>
 </html>

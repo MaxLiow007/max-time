@@ -6,7 +6,6 @@ $color-light-grey: #929292;
 body{
     background: #131722;
     font-family: 'Poppins', sans-serif;
-    overflow:hidden;
 }
 
 h1, h6{
@@ -23,19 +22,19 @@ h1, h6{
     margin: auto;
     color: white;
     text-align: center;
-	
+
 	h5{
 		font-weight: 600;
-		
+
 		span{
 			color: #ffea6e;
 		}
 	}
-	
+
 	.kr{ //key-result
  		display: flex;
 		flex-direction: column;
-		
+
 		span{
 			// text-align: left;
 		}
@@ -81,13 +80,13 @@ hr{
 	margin-top: 1rem;
 	tr{
 		td{
-			text-align: center;	
+			text-align: center;
 			width: 50px;
 			height: 50px;
 			color: $color-silver-light;
 			// color: white;
 			position: relative;
-			
+
 			.date{
 				font-size: 10px;
 				color: $color-light-grey;
@@ -96,31 +95,31 @@ hr{
 				bottom: 0;
 				right: 0;
 			}
-			
+
 			&.active{
 				background: $color-yellow;
 				color: $color-bg-black;
-				
+
 				& > span.date{
 					color: $color-light-grey;
 				}
 			}
-			
+
 			&.today{
 				border: 1px solid white;
 				color: white;
-				
+
 				span.date{
 					color: white;
 				}
 			}
 		}
-		
+
 		&.underline{
 			border-bottom: 1px solid white;
 		}
 	}
-	
+
 	.inner-square{
 		width: 20px;
 		height: 20px;
@@ -129,11 +128,11 @@ hr{
 		bottom:0;
 		right:0;
 		font-size: 8px;
-		
+
 		.date{
 			display: flex;
 			flex-direction:column;
-			
+
 			.separator{
 				content: '';
 				position: absolute;
@@ -141,12 +140,12 @@ hr{
 				height: 100%;
 				width: 100%;
 				transform: translateY(-50%);
-				margin-left: auto; 
-				margin-right: auto; 
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
-		
-		
+
+
 	}
 }
 
@@ -158,7 +157,7 @@ footer{
 	align-items: center;
 	justify-content: center;
 	color:white;
-	
+
 	.inner{
 		p{
 			font-size: 12px;
@@ -166,3 +165,12 @@ footer{
 	}
 }
 /*---------- footer end ---------------*/
+
+/*---------- Bootstrap Overide Start---------------*/
+@media (max-width: 992px){
+	.container{
+		max-width: 850px!important;
+	}
+}
+
+/*---------- Bootstrap Overide End---------------*/
