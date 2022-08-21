@@ -75,8 +75,8 @@ for ($i=0; $i < 90; $i++) {
         <div class="row" style="margin-top: 30px">
             <br>
 			<div class="col-12 col-sm-12 col-md ">
-                <div id="outer" class="container">
-                    <div id="inner">
+                <div class="outer-container container">
+                    <div class="inner-container">
                         <h5>We <span>become what we think about</span>
 							<br>
 							most of the time.
@@ -96,11 +96,10 @@ for ($i=0; $i < 90; $i++) {
             </div>
 
             <div class="col-12 col-sm-12 col-md-7">
-                <div id="outer" class="container">
-                    <div id="inner">
-
-						<h5>Day Left</h5>
-                        <h4><?=$dayLeft?></h4>
+                 <div class="outer-container container">
+                    <div class="inner-container">
+						<h5>Q3 Days Left</h5>
+                        <!-- <h4><?=$dayLeft?></h4> -->
 						<input id="day_left" type="hidden" value="<?=$dayLeft?>">
 
 						<div id="square">

@@ -3,6 +3,10 @@ $color-bg-black: #0e1118;
 $color-silver-light: #52514d;
 $color-light-grey: #929292;
 
+html{
+	background: #131722;
+}
+
 body{
     background: #131722;
     font-family: 'Poppins', sans-serif;
@@ -12,13 +16,13 @@ h1, h6{
     color:white;
 }
 
-#outer {
+.outer-container {
     width: 100%;
     height: 85vh;
     display: flex;
 }
 
-#inner {
+.inner-container {
     margin: auto;
     color: white;
     text-align: center;
